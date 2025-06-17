@@ -1,0 +1,12 @@
+// Sidebar components will be exported from here 
+export { default as BasicSidebar } from './BasicSidebar';
+export { default as CollapsibleSidebar } from './CollapsibleSidebar';
+export { default as SidebarWithIcons } from './SidebarWithIcons';
+export { default as SidebarWithHeaderFooter } from './SidebarWithHeaderFooter';
+export { default as SidebarWithUserProfile } from './SidebarWithUserProfile';
+export { default as SidebarWithSubmenus } from './SidebarWithSubmenus';
+export { default as HoverExpandSidebar } from './HoverExpandSidebar';
+export { default as SidebarWithTabs } from './SidebarWithTabs';
+export { default as RightAlignedSidebar } from './RightAlignedSidebar';
+export { default as SidebarWithDarkMode } from './SidebarWithDarkMode';
+export { default as SlideInMenuSidebar } from './SlideInMenuSidebar'; 

@@ -1,0 +1,10 @@
+export { default as HeroSection } from './HeroSection';
+export { default as FeatureSection } from './FeatureSection';
+export { default as ContentWithSidebar } from './ContentWithSidebar';
+export { default as TestimonialSection } from './TestimonialSection';
+export { default as PricingSection } from './PricingSection';
+export { default as FAQSection } from './FAQSection';
+export { default as GallerySection } from './GallerySection';
+export { default as BlogPreviewSection } from './BlogPreviewSection';
+export { default as CallToActionSection } from './CallToActionSection';
+export { default as ContactSection } from './ContactSection'; 
