@@ -1,0 +1,10 @@
+export { BasicTag } from './BasicTag';
+export { ColoredTag } from './ColoredTag';
+export { RoundedTag } from './RoundedTag';
+export { IconTag } from './IconTag';
+export { ClosableTag } from './ClosableTag';
+export { OutlinedTag } from './OutlinedTag';
+export { TagWithAvatar } from './TagWithAvatar';
+export { PillTag } from './PillTag';
+export { TagGroup } from './TagGroup';
+export { GradientTag } from './GradientTag'; 

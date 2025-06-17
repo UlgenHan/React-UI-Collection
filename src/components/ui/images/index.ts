@@ -1,0 +1,10 @@
+export { ResponsiveImage } from './ResponsiveImage';
+export { RoundedImage } from './RoundedImage';
+export { AvatarImage } from './AvatarImage';
+export { HoverZoomImage } from './HoverZoomImage';
+export { ImageWithCaption } from './ImageWithCaption';
+export { LazyLoadedImage } from './LazyLoadedImage';
+export { FramedImage } from './FramedImage';
+export { AspectRatioImage } from './AspectRatioImage';
+export { BackgroundImage } from './BackgroundImage';
+export { GalleryImage } from './GalleryImage'; 

@@ -83,6 +83,76 @@ const ComponentGallery: React.FC = () => {
       route: 'flex'
     },
     {
+      name: 'Date Pickers',
+      description: 'Date and time selection components with calendars and ranges',
+      count: 10,
+      available: true,
+      route: 'date-pickers'
+    },
+    {
+      name: 'File Uploads',
+      description: 'File upload components with drag & drop, progress, and validation',
+      count: 10,
+      available: true,
+      route: 'file-uploads'
+    },
+    {
+      name: 'Search',
+      description: 'Search input components with various styles and functionality',
+      count: 10,
+      available: true,
+      route: 'search'
+    },
+    {
+      name: 'Rating',
+      description: 'Star rating components for user feedback and reviews',
+      count: 10,
+      available: true,
+      route: 'rating'
+    },
+    {
+      name: 'Alerts',
+      description: 'Alert and notification components for user feedback',
+      count: 10,
+      available: true,
+      route: 'alerts'
+    },
+    {
+      name: 'Toasts',
+      description: 'Toast notification components with positioning and animations',
+      count: 10,
+      available: true,
+      route: 'toasts'
+    },
+    {
+      name: 'Loaders',
+      description: 'Loading spinners and progress indicators',
+      count: 10,
+      available: true,
+      route: 'loaders'
+    },
+    {
+      name: 'Buttons',
+      description: 'Interactive button components with various styles and states',
+      count: 10,
+      available: true,
+      route: 'buttons'
+    },
+    {
+      name: 'Avatars',
+      description: 'User avatar components with different styles and status indicators',
+      count: 10,
+      available: true,
+      route: 'avatars'
+    },
+    {
+      name: 'Badges',
+      description: 'Badge and label components for status and information display',
+      count: 10,
+      available: true,
+      route: 'badges'
+    },
+    {
       name: 'Forms',
       description: 'Input forms, validation, and interactive form elements',
       count: 0,
@@ -90,11 +160,18 @@ const ComponentGallery: React.FC = () => {
       route: 'forms'
     },
     {
-      name: 'Navigation',
-      description: 'Breadcrumbs, pagination, and navigation components',
-      count: 0,
-      available: false,
-      route: 'navigation'
+      name: 'Breadcrumbs',
+      description: 'Navigation breadcrumb components with various styles and separators',
+      count: 10,
+      available: true,
+      route: 'breadcrumbs'
+    },
+    {
+      name: 'Pagination',
+      description: 'Pagination components for data navigation and page browsing',
+      count: 10,
+      available: true,
+      route: 'pagination'
     },
     {
       name: 'Display',
@@ -102,13 +179,6 @@ const ComponentGallery: React.FC = () => {
       count: 0,
       available: false,
       route: 'display'
-    },
-    {
-      name: 'Feedback',
-      description: 'Alerts, notifications, and user feedback components',
-      count: 0,
-      available: false,
-      route: 'feedback'
     },
     {
       name: 'Media',
@@ -177,7 +247,7 @@ const ComponentGallery: React.FC = () => {
               </p>
               
               <button
-                onClick={() => category.available && navigateTo(category.route)}
+                onClick={() => category.available && navigateTo(category.route as any)}
                 disabled={!category.available}
                 className={`w-full py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200 ${
                   category.available
@@ -194,27 +264,41 @@ const ComponentGallery: React.FC = () => {
         {/* Quick Links */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Quick Links</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
             <button
-              onClick={() => navigateTo('menus')}
+              onClick={() => navigateTo('search')}
               className="p-4 text-left bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors duration-200"
             >
-              <h3 className="font-semibold text-blue-900 mb-1">Menu Gallery</h3>
-              <p className="text-sm text-blue-700">Browse all menu components</p>
+              <h3 className="font-semibold text-blue-900 mb-1">Search Gallery</h3>
+              <p className="text-sm text-blue-700">Browse all search components</p>
             </button>
             <button
-              onClick={() => navigateTo('tabs')}
+              onClick={() => navigateTo('rating')}
+              className="p-4 text-left bg-yellow-50 hover:bg-yellow-100 rounded-lg transition-colors duration-200"
+            >
+              <h3 className="font-semibold text-yellow-900 mb-1">Rating Gallery</h3>
+              <p className="text-sm text-yellow-700">Browse all rating components</p>
+            </button>
+            <button
+              onClick={() => navigateTo('alerts')}
+              className="p-4 text-left bg-red-50 hover:bg-red-100 rounded-lg transition-colors duration-200"
+            >
+              <h3 className="font-semibold text-red-900 mb-1">Alert Gallery</h3>
+              <p className="text-sm text-red-700">Browse all alert components</p>
+            </button>
+            <button
+              onClick={() => navigateTo('toasts')}
               className="p-4 text-left bg-indigo-50 hover:bg-indigo-100 rounded-lg transition-colors duration-200"
             >
-              <h3 className="font-semibold text-indigo-900 mb-1">Tab Gallery</h3>
-              <p className="text-sm text-indigo-700">Browse all tab components</p>
+              <h3 className="font-semibold text-indigo-900 mb-1">Toast Gallery</h3>
+              <p className="text-sm text-indigo-700">Browse all toast components</p>
             </button>
             <button
-              onClick={() => navigateTo('sections')}
-              className="p-4 text-left bg-green-50 hover:bg-green-100 rounded-lg transition-colors duration-200"
+              onClick={() => navigateTo('loaders')}
+              className="p-4 text-left bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors duration-200"
             >
-              <h3 className="font-semibold text-green-900 mb-1">Section Gallery</h3>
-              <p className="text-sm text-green-700">Browse all section components</p>
+              <h3 className="font-semibold text-gray-900 mb-1">Loader Gallery</h3>
+              <p className="text-sm text-gray-700">Browse all loader components</p>
             </button>
             <button
               onClick={() => navigateTo('modals')}

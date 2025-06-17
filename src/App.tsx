@@ -11,8 +11,20 @@ import CardGallery from './pages/CardGallery';
 import ModalGallery from './pages/ModalGallery';
 import MenuGallery from './pages/MenuGallery';
 import TabGallery from './pages/TabGallery';
+import BreadcrumbGallery from './pages/BreadcrumbGallery';
+import PaginationGallery from './pages/PaginationGallery';
+import DatePickerGallery from './pages/DatePickerGallery';
+import FileUploadGallery from './pages/FileUploadGallery';
+import SearchGallery from './pages/SearchGallery';
+import RatingGallery from './pages/RatingGallery';
+import AlertGallery from './pages/AlertGallery';
+import ToastGallery from './pages/ToastGallery';
+import LoaderGallery from './pages/LoaderGallery';
+import ButtonGallery from './pages/ButtonGallery';
+import AvatarGallery from './pages/AvatarGallery';
+import BadgeGallery from './pages/BadgeGallery';
 
-type Page = 'home' | 'headers' | 'sidebars' | 'footers' | 'containers' | 'grid' | 'flex' | 'sections' | 'cards' | 'modals' | 'menus' | 'tabs';
+type Page = 'home' | 'headers' | 'sidebars' | 'footers' | 'containers' | 'grid' | 'flex' | 'sections' | 'cards' | 'modals' | 'menus' | 'tabs' | 'breadcrumbs' | 'pagination' | 'date-pickers' | 'file-uploads' | 'search' | 'rating' | 'alerts' | 'toasts' | 'loaders' | 'buttons' | 'avatars' | 'badges';
 
 interface NavigationContextType {
   currentPage: Page;
@@ -57,6 +69,30 @@ const App: React.FC = () => {
       setCurrentPage('menus');
     } else if (path === '/tabs') {
       setCurrentPage('tabs');
+    } else if (path === '/breadcrumbs') {
+      setCurrentPage('breadcrumbs');
+    } else if (path === '/pagination') {
+      setCurrentPage('pagination');
+    } else if (path === '/date-pickers') {
+      setCurrentPage('date-pickers');
+    } else if (path === '/file-uploads') {
+      setCurrentPage('file-uploads');
+    } else if (path === '/search') {
+      setCurrentPage('search');
+    } else if (path === '/rating') {
+      setCurrentPage('rating');
+    } else if (path === '/alerts') {
+      setCurrentPage('alerts');
+    } else if (path === '/toasts') {
+      setCurrentPage('toasts');
+    } else if (path === '/loaders') {
+      setCurrentPage('loaders');
+    } else if (path === '/buttons') {
+      setCurrentPage('buttons');
+    } else if (path === '/avatars') {
+      setCurrentPage('avatars');
+    } else if (path === '/badges') {
+      setCurrentPage('badges');
     } else {
       setCurrentPage('home');
     }
@@ -92,6 +128,30 @@ const App: React.FC = () => {
         return <MenuGallery />;
       case 'tabs':
         return <TabGallery />;
+      case 'breadcrumbs':
+        return <BreadcrumbGallery />;
+      case 'pagination':
+        return <PaginationGallery />;
+      case 'date-pickers':
+        return <DatePickerGallery />;
+      case 'file-uploads':
+        return <FileUploadGallery />;
+      case 'search':
+        return <SearchGallery />;
+      case 'rating':
+        return <RatingGallery />;
+      case 'alerts':
+        return <AlertGallery />;
+      case 'toasts':
+        return <ToastGallery />;
+      case 'loaders':
+        return <LoaderGallery />;
+      case 'buttons':
+        return <ButtonGallery />;
+      case 'avatars':
+        return <AvatarGallery />;
+      case 'badges':
+        return <BadgeGallery />;
       case 'home':
       default:
         return <ComponentGallery />;

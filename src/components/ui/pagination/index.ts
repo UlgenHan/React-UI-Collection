@@ -1,0 +1,10 @@
+export { BasicPagination } from './BasicPagination';
+export { CompactPagination } from './CompactPagination';
+export { EllipsisPagination } from './EllipsisPagination';
+export { IconPagination } from './IconPagination';
+export { RoundedPagination } from './RoundedPagination';
+export { BorderedPagination } from './BorderedPagination';
+export { InputPagination } from './InputPagination';
+export { PaginationWithSummary } from './PaginationWithSummary';
+export { StickyFooterPagination } from './StickyFooterPagination';
+export { AnimatedPagination } from './AnimatedPagination'; 

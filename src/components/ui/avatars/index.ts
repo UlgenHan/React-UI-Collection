@@ -1,0 +1,10 @@
+export { BasicAvatar } from './BasicAvatar';
+export { InitialsAvatar } from './InitialsAvatar';
+export { StatusAvatar } from './StatusAvatar';
+export { BorderedAvatar } from './BorderedAvatar';
+export { GroupAvatar } from './GroupAvatar';
+export { ClickableAvatar } from './ClickableAvatar';
+export { IconAvatar } from './IconAvatar';
+export { RoundedSquareAvatar } from './RoundedSquareAvatar';
+export { AvatarWithName } from './AvatarWithName';
+export { AvatarSkeleton } from './AvatarSkeleton'; 
