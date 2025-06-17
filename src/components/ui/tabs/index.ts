@@ -1,0 +1,21 @@
+export { default as HorizontalTabs } from './HorizontalTabs';
+export { default as VerticalTabs } from './VerticalTabs';
+export { default as UnderlineTabs } from './UnderlineTabs';
+export { default as PillTabs } from './PillTabs';
+export { default as IconTabs } from './IconTabs';
+export { default as ScrollableTabs } from './ScrollableTabs';
+export { default as CardTabs } from './CardTabs';
+export { default as SegmentedControlTabs } from './SegmentedControlTabs';
+export { default as AnimatedTabs } from './AnimatedTabs';
+export { default as ResponsiveTabs } from './ResponsiveTabs';
+
+export type { Tab as HorizontalTab, HorizontalTabsProps } from './HorizontalTabs';
+export type { Tab as VerticalTab, VerticalTabsProps } from './VerticalTabs';
+export type { Tab as UnderlineTab, UnderlineTabsProps } from './UnderlineTabs';
+export type { Tab as PillTab, PillTabsProps } from './PillTabs';
+export type { Tab as IconTab, IconTabsProps } from './IconTabs';
+export type { Tab as ScrollableTab, ScrollableTabsProps } from './ScrollableTabs';
+export type { Tab as CardTab, CardTabsProps } from './CardTabs';
+export type { Tab as SegmentedTab, SegmentedControlTabsProps } from './SegmentedControlTabs';
+export type { Tab as AnimatedTab, AnimatedTabsProps } from './AnimatedTabs';
+export type { Tab as ResponsiveTab, ResponsiveTabsProps } from './ResponsiveTabs'; 
