@@ -31,8 +31,10 @@ import NotificationGallery from './pages/NotificationGallery';
 import DataGridGallery from './pages/DataGridGallery';
 import ProgramTimelineGallery from './pages/ProgramTimelineGallery';
 import TimelineEditorGallery from './pages/TimelineEditorGallery';
+import EcommerceGallery from './pages/EcommerceGallery';
+import WebsiteBuilderGallery from './pages/WebsiteBuilderGallery';
 
-type Page = 'home' | 'headers' | 'sidebars' | 'footers' | 'containers' | 'grid' | 'flex' | 'sections' | 'cards' | 'modals' | 'menus' | 'tabs' | 'breadcrumbs' | 'pagination' | 'date-pickers' | 'file-uploads' | 'search' | 'rating' | 'alerts' | 'toasts' | 'loaders' | 'buttons' | 'avatars' | 'badges' | 'media' | 'chat' | 'maps' | 'comments' | 'notifications' | 'datagrid' | 'program-timeline' | 'timeline-editor';
+type Page = 'home' | 'headers' | 'sidebars' | 'footers' | 'containers' | 'grid' | 'flex' | 'sections' | 'cards' | 'modals' | 'menus' | 'tabs' | 'breadcrumbs' | 'pagination' | 'date-pickers' | 'file-uploads' | 'search' | 'rating' | 'alerts' | 'toasts' | 'loaders' | 'buttons' | 'avatars' | 'badges' | 'media' | 'chat' | 'maps' | 'comments' | 'notifications' | 'datagrid' | 'program-timeline' | 'timeline-editor' | 'ecommerce' | 'website-builder';
 
 interface NavigationContextType {
   currentPage: Page;
@@ -59,6 +61,10 @@ const App: React.FC = () => {
       setCurrentPage('timeline-editor');
     } else if (path === '/program-timeline-gallery') {
       setCurrentPage('program-timeline');
+    } else if (path === '/ecommerce') {
+      setCurrentPage('ecommerce');
+    } else if (path === '/website-builder') {
+      setCurrentPage('website-builder');
     } else if (path === '/headers') {
       setCurrentPage('headers');
     } else if (path === '/sidebars') {
@@ -124,7 +130,7 @@ const App: React.FC = () => {
 
   const navigateTo = (page: Page) => {
     setCurrentPage(page);
-    const path = page === 'home' ? '/' : page === 'timeline-editor' ? '/timeline-editor-gallery' : page === 'program-timeline' ? '/program-timeline-gallery' : `/${page}`;
+    const path = page === 'home' ? '/' : page === 'timeline-editor' ? '/timeline-editor-gallery' : page === 'program-timeline' ? '/program-timeline-gallery' : page === 'ecommerce' ? '/ecommerce' : page === 'website-builder' ? '/website-builder' : `/${page}`;
     window.history.pushState({}, '', path);
   };
 
@@ -192,6 +198,10 @@ const App: React.FC = () => {
         return <ProgramTimelineGallery />;
       case 'timeline-editor':
         return <TimelineEditorGallery />;
+      case 'ecommerce':
+        return <EcommerceGallery />;
+      case 'website-builder':
+        return <WebsiteBuilderGallery />;
       case 'home':
       default:
         return <ComponentGallery />;
@@ -203,6 +213,7 @@ const App: React.FC = () => {
       <div className="App">
         <nav className="p-4 bg-gray-100 border-b flex gap-4">
           <button onClick={() => navigateTo('timeline-editor')} className="text-blue-600 hover:underline">Timeline Editor Gallery</button>
+          <button onClick={() => navigateTo('website-builder')} className="text-blue-600 hover:underline">Website Builder</button>
         </nav>
         {renderCurrentPage()}
       </div>

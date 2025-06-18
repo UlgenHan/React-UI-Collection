@@ -214,6 +214,13 @@ const ComponentGallery: React.FC = () => {
       count: 1,
       available: true,
       route: 'datagrid'
+    },
+    {
+      name: 'E-commerce Module',
+      description: 'Complete e-commerce solution with products, cart, checkout, and order management',
+      count: 8,
+      available: true,
+      route: 'ecommerce'
     }
   ];
 
@@ -362,6 +369,13 @@ const ComponentGallery: React.FC = () => {
             >
               <h3 className="font-semibold text-pink-900 mb-1">Comment Gallery</h3>
               <p className="text-sm text-pink-700">Browse all comment components</p>
+            </button>
+            <button
+              onClick={() => navigateTo('ecommerce')}
+              className="p-4 text-left bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors duration-200"
+            >
+              <h3 className="font-semibold text-orange-900 mb-1">E-commerce Module</h3>
+              <p className="text-sm text-orange-700">Complete e-commerce solution</p>
             </button>
           </div>
         </div>
