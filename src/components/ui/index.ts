@@ -52,30 +52,11 @@ export * from './badges';
 // Tooltip components
 export * from './tooltips';
 
-// Layout Components
-export * from './layout';
+// Layout Components are exported from ../layout
 
-// UI Components
-export * from './cards';
-export * from './menus';
-export * from './modals';
-export * from './tabs';
-export * from './breadcrumbs';
-export * from './checkboxes';
-export * from './date-pickers';
-export * from './drawers';
+// Additional UI Components  
 export * from './inputs';
-export * from './pagination';
-export * from './radios';
-export * from './steppers';
 export * from './textareas';
-export * from './uploads';
-export * from './sliders';
-export * from './buttons';
-export * from './tables';
-export * from './lists';
-export * from './badges';
-export * from './tooltips';
 export * from './popovers';
 export * from './tags';
 export * from './accordions';
@@ -89,6 +70,30 @@ export * from './skeletons';
 
 // Media components
 export * from './media';
+
+// Chat components
+export * from './chat';
+
+// Map components
+export * from './maps';
+
+// Comment components
+export * from './comments';
+
+// Notification components
+export {
+  BasicNotificationDropdown,
+  GroupedNotifications,
+  NotificationWithIcons,
+  SlidingDropdown,
+  FullPageNotificationPanel,
+  StickyNotificationBar,
+  DarkModeNotification,
+  NotificationWithTime,
+  ActionableNotification,
+  InteractiveNotificationCenter
+} from './notifications';
+export type { Notification as NotificationCenterItem } from './notifications';
 
 // Dialog components
 export * from './dialogs';

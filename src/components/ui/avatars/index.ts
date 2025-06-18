@@ -6,5 +6,4 @@ export { GroupAvatar } from './GroupAvatar';
 export { ClickableAvatar } from './ClickableAvatar';
 export { IconAvatar } from './IconAvatar';
 export { RoundedSquareAvatar } from './RoundedSquareAvatar';
-export { AvatarWithName } from './AvatarWithName';
-export { AvatarSkeleton } from './AvatarSkeleton'; 
+export { AvatarWithName } from './AvatarWithName'; 

@@ -182,10 +182,38 @@ const ComponentGallery: React.FC = () => {
     },
     {
       name: 'Media',
-      description: 'Image galleries, videos, and media display components',
-      count: 0,
-      available: false,
+      description: 'Audio and video player components with custom controls and features',
+      count: 20,
+      available: true,
       route: 'media'
+    },
+    {
+      name: 'Chat Widgets',
+      description: 'Interactive chat components for customer support and messaging',
+      count: 10,
+      available: true,
+      route: 'chat'
+    },
+    {
+      name: 'Map Widgets',
+      description: 'Interactive map components for location display and navigation',
+      count: 10,
+      available: true,
+      route: 'maps'
+    },
+    {
+      name: 'Comments',
+      description: 'Comment system components for user discussions and feedback',
+      count: 10,
+      available: true,
+      route: 'comments'
+    },
+    {
+      name: 'DataGrid',
+      description: 'Enterprise-ready, extensible data table/grid system',
+      count: 1,
+      available: true,
+      route: 'datagrid'
     }
   ];
 
@@ -264,7 +292,7 @@ const ComponentGallery: React.FC = () => {
         {/* Quick Links */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Quick Links</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
             <button
               onClick={() => navigateTo('search')}
               className="p-4 text-left bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors duration-200"
@@ -306,6 +334,34 @@ const ComponentGallery: React.FC = () => {
             >
               <h3 className="font-semibold text-purple-900 mb-1">Modal Gallery</h3>
               <p className="text-sm text-purple-700">Browse all modal components</p>
+            </button>
+            <button
+              onClick={() => navigateTo('media')}
+              className="p-4 text-left bg-green-50 hover:bg-green-100 rounded-lg transition-colors duration-200"
+            >
+              <h3 className="font-semibold text-green-900 mb-1">Media Gallery</h3>
+              <p className="text-sm text-green-700">Browse all media components</p>
+            </button>
+            <button
+              onClick={() => navigateTo('chat')}
+              className="p-4 text-left bg-teal-50 hover:bg-teal-100 rounded-lg transition-colors duration-200"
+            >
+              <h3 className="font-semibold text-teal-900 mb-1">Chat Gallery</h3>
+              <p className="text-sm text-teal-700">Browse all chat widgets</p>
+            </button>
+            <button
+              onClick={() => navigateTo('maps')}
+              className="p-4 text-left bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-colors duration-200"
+            >
+              <h3 className="font-semibold text-emerald-900 mb-1">Map Gallery</h3>
+              <p className="text-sm text-emerald-700">Browse all map widgets</p>
+            </button>
+            <button
+              onClick={() => navigateTo('comments')}
+              className="p-4 text-left bg-pink-50 hover:bg-pink-100 rounded-lg transition-colors duration-200"
+            >
+              <h3 className="font-semibold text-pink-900 mb-1">Comment Gallery</h3>
+              <p className="text-sm text-pink-700">Browse all comment components</p>
             </button>
           </div>
         </div>

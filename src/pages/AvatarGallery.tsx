@@ -9,9 +9,9 @@ import {
   GroupAvatar,
   ClickableAvatar,
   AvatarWithName,
-  IconAvatar,
-  AvatarSkeleton
+  IconAvatar
 } from '../components/ui/avatars';
+import { AvatarSkeleton } from '../components/ui/skeletons';
 
 const AvatarGallery: React.FC = () => {
   const { navigateTo } = useNavigation();

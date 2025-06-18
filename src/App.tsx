@@ -23,8 +23,16 @@ import LoaderGallery from './pages/LoaderGallery';
 import ButtonGallery from './pages/ButtonGallery';
 import AvatarGallery from './pages/AvatarGallery';
 import BadgeGallery from './pages/BadgeGallery';
+import MediaGallery from './pages/MediaGallery';
+import ChatGallery from './pages/ChatGallery';
+import MapGallery from './pages/MapGallery';
+import CommentGallery from './pages/CommentGallery';
+import NotificationGallery from './pages/NotificationGallery';
+import DataGridGallery from './pages/DataGridGallery';
+import ProgramTimelineGallery from './pages/ProgramTimelineGallery';
+import TimelineEditorGallery from './pages/TimelineEditorGallery';
 
-type Page = 'home' | 'headers' | 'sidebars' | 'footers' | 'containers' | 'grid' | 'flex' | 'sections' | 'cards' | 'modals' | 'menus' | 'tabs' | 'breadcrumbs' | 'pagination' | 'date-pickers' | 'file-uploads' | 'search' | 'rating' | 'alerts' | 'toasts' | 'loaders' | 'buttons' | 'avatars' | 'badges';
+type Page = 'home' | 'headers' | 'sidebars' | 'footers' | 'containers' | 'grid' | 'flex' | 'sections' | 'cards' | 'modals' | 'menus' | 'tabs' | 'breadcrumbs' | 'pagination' | 'date-pickers' | 'file-uploads' | 'search' | 'rating' | 'alerts' | 'toasts' | 'loaders' | 'buttons' | 'avatars' | 'badges' | 'media' | 'chat' | 'maps' | 'comments' | 'notifications' | 'datagrid' | 'program-timeline' | 'timeline-editor';
 
 interface NavigationContextType {
   currentPage: Page;
@@ -47,7 +55,11 @@ const App: React.FC = () => {
   // Initialize page from URL
   useEffect(() => {
     const path = window.location.pathname;
-    if (path === '/headers') {
+    if (path === '/timeline-editor-gallery') {
+      setCurrentPage('timeline-editor');
+    } else if (path === '/program-timeline-gallery') {
+      setCurrentPage('program-timeline');
+    } else if (path === '/headers') {
       setCurrentPage('headers');
     } else if (path === '/sidebars') {
       setCurrentPage('sidebars');
@@ -93,6 +105,18 @@ const App: React.FC = () => {
       setCurrentPage('avatars');
     } else if (path === '/badges') {
       setCurrentPage('badges');
+    } else if (path === '/media') {
+      setCurrentPage('media');
+    } else if (path === '/chat') {
+      setCurrentPage('chat');
+    } else if (path === '/maps') {
+      setCurrentPage('maps');
+    } else if (path === '/comments') {
+      setCurrentPage('comments');
+    } else if (path === '/notifications') {
+      setCurrentPage('notifications');
+    } else if (path === '/datagrid') {
+      setCurrentPage('datagrid');
     } else {
       setCurrentPage('home');
     }
@@ -100,7 +124,7 @@ const App: React.FC = () => {
 
   const navigateTo = (page: Page) => {
     setCurrentPage(page);
-    const path = page === 'home' ? '/' : `/${page}`;
+    const path = page === 'home' ? '/' : page === 'timeline-editor' ? '/timeline-editor-gallery' : page === 'program-timeline' ? '/program-timeline-gallery' : `/${page}`;
     window.history.pushState({}, '', path);
   };
 
@@ -152,6 +176,22 @@ const App: React.FC = () => {
         return <AvatarGallery />;
       case 'badges':
         return <BadgeGallery />;
+      case 'media':
+        return <MediaGallery />;
+      case 'chat':
+        return <ChatGallery />;
+      case 'maps':
+        return <MapGallery />;
+      case 'comments':
+        return <CommentGallery />;
+      case 'notifications':
+        return <NotificationGallery />;
+      case 'datagrid':
+        return <DataGridGallery />;
+      case 'program-timeline':
+        return <ProgramTimelineGallery />;
+      case 'timeline-editor':
+        return <TimelineEditorGallery />;
       case 'home':
       default:
         return <ComponentGallery />;
@@ -161,6 +201,9 @@ const App: React.FC = () => {
   return (
     <NavigationContext.Provider value={{ currentPage, navigateTo }}>
       <div className="App">
+        <nav className="p-4 bg-gray-100 border-b flex gap-4">
+          <button onClick={() => navigateTo('timeline-editor')} className="text-blue-600 hover:underline">Timeline Editor Gallery</button>
+        </nav>
         {renderCurrentPage()}
       </div>
     </NavigationContext.Provider>

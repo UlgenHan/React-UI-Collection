@@ -16,5 +16,5 @@ export * from './ui';
 // Feedback Components (coming soon)
 // export * from './feedback';
 
-// Media Components (coming soon)
-// export * from './media'; 
+// Media Components
+export * from './media'; 
